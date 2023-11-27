@@ -56,6 +56,26 @@ Optionally, set names for the deviceids in Homekit:
     ],
 ```
 
+Additionally, set the http request timeout and the cache expiration of room carousel data
+
+```
+    "platforms": [
+       {
+         "platform": "ConnectedByTcp",
+         "name": "ConnectedByTcp",
+         "ip": "172.16.1.40",
+         "loglevel":"3",
+         "token":"e2de937chr0lhrlqd6bus3l2z5jcy5p3vs7013bq",
+         "deviceNames": {
+           "219373657216334108": "Desk Lamp",
+           "219373657216334927": "Stand Lamp"
+         },
+         "requestTimeout": 1500,
+         "roomCacheTTL" : 0
+       }
+    ],
+```
+
 # TCP Connected API
 
 General documentation on what I have discovered about the TCP Connected API.

@@ -1,6 +1,6 @@
 {
   "name": "homebridge-connectedbytcp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Connected by TCP plugin for homebridge: https://github.com/nfarina/homebridge",
   "license": "ISC",
   "keywords": [
@@ -8,10 +8,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:chanomie/homebridge-connectedbytcp.git"
+    "url": "git@github.com:gene203/homebridge-connectedbytcp.git"
   },
   "bugs": {
-    "url": "https://github.com/chanomie/homebridge-connectedbytcp/issues"
+    "url": "https://github.com/gene203/homebridge-connectedbytcp/issues"
   },
   "engines": {
     "node": ">=0.12.0",

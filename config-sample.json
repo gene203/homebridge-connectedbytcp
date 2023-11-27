@@ -17,7 +17,9 @@
          "deviceNames": {
            "219373657216334108": "Desk Lamp",
            "219373657216334927": "Stand Lamp"
-         }
+         },
+         "requestTimeout": 1500,
+         "roomCacheTTL": 0
        }
     ],
     "accessories": []
