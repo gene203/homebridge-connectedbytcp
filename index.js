@@ -336,10 +336,12 @@ ConnectedByTcp.prototype = {
       } else if (error && error.code == "ECONNRESET") {
         self.log("ECONNRESET: "+hubAddress+" "+ body);
         callback();
+      } else if (error && error.code == "ESOCKETTIMEDOUT") {
+        self.log("deviceSendComment:timeout:did: ", deviceid);
+        callback();
       } else if (error) {
-        self.log("deviceSendCommand:error.code: " + error.code);
-        self.log("deviceSendCommand:error.errno: " + error.errno);
-        self.log("deviceSendCommand:error.syscall: " + error.syscall);
+        self.log("deviceSendComment:did: ", deviceid);
+        self.log("deviceSendComment: ", error, response, body);
         callback();
       } else if(body == "<gip><version>1</version><rc>404</rc></gip>") {
         self.log("Token is invalid, switch back to sync mode to try again.");
@@ -348,9 +350,9 @@ ConnectedByTcp.prototype = {
         xml2js.parseString(body, function (err, result) {
           if ( err ) 
           {
-		self.log("xml2js: err: " , err);
+		        self.log("xml2js: err: " , err);
           	self.log("Done parsing XML: " + JSON.stringify(result));
-	  }
+	        }
           callback();
         });
       }
